@@ -10,8 +10,14 @@ export const userConstants = {
     }
 }
 
+// ===============  validators   ===============
 
-// ===============  Custome Error   ===============
+export const validatorType = {
+    CREATE_USER: "CREATE_USER",
+    UPDATE_USER: "UPDATE_USER"
+}
+
+// ===============  Custom Error   ===============
 
 export class CustomError extends Error {
     constructor(status, message) {

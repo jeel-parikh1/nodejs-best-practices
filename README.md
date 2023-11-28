@@ -33,7 +33,7 @@ NodeJs-Best-Practices is a boilerplate for building Node.js applications with ba
   - `fix/` for fix branches
 
 ## Prerequisites
-- Node.js version 18.17.0
+- Node.js version v20.10.0
 - MongoDB
 - Postman
 

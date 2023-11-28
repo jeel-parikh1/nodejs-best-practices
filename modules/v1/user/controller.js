@@ -33,7 +33,7 @@ const getUserById = async (req, res, next) => {
 
 const addUser = async (req, res, next) => {
     try {
-        const data = req.body;
+        const data = { ...req.body, ...req.validatedData };
         data.userPassword = await encryptPassword(data.userPassword)
         const user = await createUser(data);
         return sendResponse(res, httpStatusCodes.Created, responseStatus.SUCCESS, "Add user", user)
@@ -46,10 +46,12 @@ const addUser = async (req, res, next) => {
 
 const updateUser = async (req, res, next) => {
     try {
-        const id = req.params.id;
-        delete req.body.userEmail
-        const { userPassword } = req.body
-        const updateData = userPassword ? { ...req.body, userPassword: await encryptPassword(userPassword) } : req.body
+        const data = { ...req.body, ...req.validatedData };
+        const id = data.id;
+        delete data.userEmail
+        delete data.id
+        const { userPassword } = data
+        const updateData = userPassword ? { ...data, userPassword: await encryptPassword(userPassword) } : data
         const user = await modifyUser({ _id: id }, updateData);
         return sendResponse(res, httpStatusCodes.OK, responseStatus.SUCCESS, "Update User", user)
     }
@@ -86,10 +88,11 @@ const getUserMe = async (req, res, next) => {
 const updateUserMe = async (req, res, next) => {
     try {
         const id = req.user._id;
-        delete req.body.userRole
-        delete req.body.userEmail
-        const { userPassword } = req.body
-        const updateData = userPassword ? { ...req.body, userPassword: await encryptPassword(userPassword) } : req.body
+        const data = { ...req.body, ...req.validatedData }
+        delete data.userRole
+        delete data.userEmail
+        const { userPassword } = data
+        const updateData = userPassword ? { ...data, userPassword: await encryptPassword(userPassword) } : data
         const user = await modifyUser({ _id: id }, updateData);
         return sendResponse(res, httpStatusCodes.OK, responseStatus.SUCCESS, "Update User Me", user)
     }
