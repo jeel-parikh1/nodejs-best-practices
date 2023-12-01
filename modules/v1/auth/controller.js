@@ -8,7 +8,8 @@ import fetchUser from "../../../databases/services/user/fetchUser.js";
 const login = async (req, res, next) => {
     try {
         res.clearCookie("token");
-        const { userEmail, userPassword } = req.body;
+        const data = { ...req.body, ...req.validatedData }
+        const { userEmail, userPassword } = data;
         const user = await fetchUser({ userEmail }, { userEmail: 1, userPassword: 1, userRole: 1 })
 
         if (!user || !(await comparePassword(userPassword, user.userPassword))) {

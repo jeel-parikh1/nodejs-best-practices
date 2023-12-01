@@ -9,7 +9,11 @@ import { sendResponse } from "../../../helpers/response.js";
 
 const getUsers = async (req, res, next) => {
     try {
-        const users = await fetchAllUser(req.query);
+        const { page, limit } = req.query
+        const conditions = req.query
+        delete conditions.page
+        delete conditions.limit
+        const users = await fetchAllUser(req.query, { page, limit });
         return sendResponse(res, httpStatusCodes.OK, responseStatus.SUCCESS, "Get All Users", users)
     }
     catch (err) {

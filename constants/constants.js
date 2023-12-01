@@ -10,13 +10,6 @@ export const userConstants = {
     }
 }
 
-// ===============  validators   ===============
-
-export const validatorType = {
-    CREATE_USER: "CREATE_USER",
-    UPDATE_USER: "UPDATE_USER"
-}
-
 // ===============  Custom Error   ===============
 
 export class CustomError extends Error {
