@@ -1,8 +1,21 @@
 {
-  "name": "nodejs-boilerplate",
+  "name": "create-nodejs-boilerplate",
   "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
+  "description": "Generate a boilerplate for a Node.js Express and MongoDB CRUD application with best practices.",
+  "bin": {
+    "create-nodejs-boilerplate": "./bin/create-nodeJs-boilerplate.js"
+  },
+  "keywords": [
+    "node",
+    "nodejs-boilerplate",
+    "boilerplate",
+    "starter",
+    "nodejs-best-practices",
+    "nodejs-best-practices-boilerplate",
+    "express",
+    "mongodb",
+    "crud"
+  ],
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "dev": "nodemon server.js",
@@ -13,7 +26,7 @@
     "prod-stop": "pm2 delete all"
   },
   "type": "module",
-  "author": "",
+  "author": "Jeel Parikh",
   "dependencies": {
     "bcrypt": "^5.1.0",
     "cookie-parser": "^1.4.6",
@@ -29,12 +42,17 @@
     "pm2": "^5.3.0",
     "swagger-ui-express": "^5.0.0"
   },
-  "license": "ISC",
   "devDependencies": {
     "eslint": "^8.54.0",
     "eslint-config-google": "^0.14.0",
     "joi-to-swagger": "^6.2.0",
     "nodemon": "^3.0.1",
     "swagger-autogen": "^2.23.7"
-  }
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/jeel-parikh1/nodejs-best-practices"
+  },
+  "homepage": "https://github.com/jeel-parikh1/nodejs-best-practices#readme",
+  "license": "ISC"
 }
