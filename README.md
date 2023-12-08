@@ -15,10 +15,10 @@ NodeJs-Best-Practices is a boilerplate for building Node.js applications with ba
    - feat: A new feature
    - fix: A bug fix
    - style: Changes that doesn't affect meaning of code(semi-colon, indentation, etc)
-   - perf: Improve performace
+   - perf: Improve performance
    - refactor: Refactor code
    - test: Add missing test cases
-   - docs: Documentation onlt change
+   - docs: Documentation only change
    - chore: Change in auxiliary tools like documentation or seed change
 
 - **Reference Issues**: If your commit is related to a specific issue or task, reference it in the commit message. For example, `fix: #123` or `feat: #456`. Here **#123** or **#456** are ticket Id.

@@ -23,7 +23,7 @@ const login = async (req, res, next) => {
             expires: new Date(Date.now() + 60 * 1000 * config.COOKIE_EXPIRE_TIME),
             httpOnly: true
         })
-        return sendResponse(res, httpStatusCodes.OK, responseStatus.SUCCESS, "logged in successfully", user)
+        return sendResponse(res, httpStatusCodes.OK, responseStatus.SUCCESS, "login successfully", user)
 
     }
     catch (err) {
@@ -35,7 +35,7 @@ const login = async (req, res, next) => {
 const logout = async (req, res, next) => {
     try {
         res.clearCookie("token")
-        return sendResponse(res, httpStatusCodes.OK, responseStatus.SUCCESS, "loggedout in successfully")
+        return sendResponse(res, httpStatusCodes.OK, responseStatus.SUCCESS, "logout in successfully")
     }
     catch (err) {
         console.log("=====logout", err.message)
