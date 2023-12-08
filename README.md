@@ -13,7 +13,7 @@ NodeJs-Best-Practices is a boilerplate for building Node.js applications with ba
 ## Installation
 1. **Initialization command:**
    ```bash
-   npx create-nodejs-boilerplate my-app
+   npx bootstrap-node-app my-app
    cd my-app
    ```
 2. **Create Environment File:** </br>

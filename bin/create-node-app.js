@@ -28,7 +28,7 @@ async function runCmd(command) {
 if (process.argv.length < 3) {
     console.log('\x1b[31m', 'You have to provide name to your app.');
     console.log('For example:');
-    console.log('    npx create-nodeJs-boilerplate my-app', '\x1b[0m');
+    console.log('    npx bootstrap-node-app my-app', '\x1b[0m');
     process.exit(1);
 }
 
@@ -65,7 +65,7 @@ async function setup() {
 
         await runCmd('npx rimraf ./.git');
 
-        fs.rm(path.join(appPath, 'bin'), { recursive: true });
+        fs.rmSync(path.join(appPath, 'bin'), { recursive: true });
         fs.unlinkSync(path.join(appPath, 'package.json'));
 
         buildPackageJson(packageJson, folderName);
