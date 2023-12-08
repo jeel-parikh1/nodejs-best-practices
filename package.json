@@ -1,5 +1,5 @@
 {
-  "name": "database",
+  "name": "nodejs-boilerplate",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
@@ -26,6 +26,7 @@
     "jsonwebtoken": "^9.0.0",
     "mongoose": "^7.3.1",
     "morgan": "^1.10.0",
+    "pm2": "^5.3.0",
     "swagger-ui-express": "^5.0.0"
   },
   "license": "ISC",
