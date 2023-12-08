@@ -96,6 +96,8 @@ function buildPackageJson(packageJson, folderName) {
         bin,
         keywords,
         repository,
+        contributors,
+        homepage,
         ...newPackage
     } = packageJson;
 
