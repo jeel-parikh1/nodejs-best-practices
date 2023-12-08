@@ -1,6 +1,6 @@
 {
   "name": "bootstrap-node-app",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Generate a boilerplate for a Node.js Express and MongoDB CRUD application with best practices.",
   "bin": {
     "bootstrap-node-app": "bin/create-node-app.js"
