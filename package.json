@@ -1,10 +1,16 @@
 {
-  "name": "create-nodejs-boilerplate",
+  "name": "bootstrap-node-app",
   "version": "1.0.0",
   "description": "Generate a boilerplate for a Node.js Express and MongoDB CRUD application with best practices.",
   "bin": {
-    "create-nodejs-boilerplate": "./bin/create-nodeJs-boilerplate.js"
+    "bootstrap-node-app": "bin/create-node-app.js"
   },
+  "contributors": [
+    {
+      "name": "Jeel Parikh",
+      "email": "jeel1512002@gmail.com"
+    }
+  ],
   "keywords": [
     "node",
     "nodejs-boilerplate",
@@ -51,7 +57,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/jeel-parikh1/nodejs-best-practices"
+    "url": "git+https://github.com/jeel-parikh1/nodejs-best-practices.git"
   },
   "homepage": "https://github.com/jeel-parikh1/nodejs-best-practices#readme",
   "license": "ISC"
